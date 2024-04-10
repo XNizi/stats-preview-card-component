@@ -1,0 +1,138 @@
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+html {
+	font-size: 62.5%;
+}
+body {
+	min-height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	padding: 0 24px;
+	background-color: #0a0c1c;
+	font-family: 'Inter', sans-serif;
+}
+.card {
+	display: flex;
+	flex-direction: column;
+	border-radius: 8px;
+	overflow: hidden;
+	background-color: #1b1937;
+	&__img {
+		position: relative;
+		img {
+			width: 100%;
+			opacity: 0.7511;
+			
+		}
+		&Color {
+			position: absolute;
+			top: 0;
+			bottom: 2px;
+			left: 0;
+			right: 0;
+			background-color: #ab5cdb;
+			mix-blend-mode: multiply;
+		}
+	}
+	&__body {
+		padding: 0 31.5px 32px;
+	}
+	&__title {
+		font-size: 2.8rem;
+		text-align: center;
+		font-weight: 700;
+		color: #fff;
+		line-height: 32px;
+		margin-top: 40px;
+		margin-bottom: 16px;
+		span {
+			color: #ab5cdb;
+		}
+	}
+	&__undertext {
+		font-size: 1.5rem;
+		font-weight: 400;
+		line-height: 25px;
+		text-align: center;
+		color: #fff;
+		margin-bottom: 40px;
+		opacity: 0.75;
+	}
+	&__numbersBox {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	&__numbersBoxItem {
+		text-align: center;
+		color: #fff;
+	}
+	&__numberItem {
+		font-size: 2.4rem;
+		font-weight: 700;
+	}
+	&__numberOf {
+		font-size: 1.2rem;
+		font-family: 'Lexend Deca', sans-serif;
+		font-weight: 400;
+		text-transform: uppercase;
+		letter-spacing: 1px;
+		line-height: 25px;
+		margin-bottom: 24px;
+		opacity: 0.6;
+		&:last-of-type {
+			margin-bottom: 0;
+		}
+	}
+}
+@media (min-width: 992px) {
+	.card {
+		flex-direction: row;
+		max-width: 1110px;
+		&__img {
+			position: relative;
+			width: 50%;
+			order: 1;
+			img {
+				background-image: url('../../dist/img/image-header-desktop.jpg');
+				object-fit: fill;
+				height: 100%;
+				width: 100%;
+			}
+			&Color {
+				bottom: 0px;
+			}
+		}
+		&__body {
+			width: 50%;
+			padding: 71px 95px 59px 71.5px;
+		}
+		&__title {
+			text-align: left;
+			margin-top: 0;
+			margin-bottom: 25px;
+			font-size: 3.6rem;
+			line-height: 44px;
+		}
+		&__undertext {
+			text-align: left;
+			margin-bottom: 72px;
+		}
+		&__numbersBox {
+			display: flex;
+			flex-direction: row;
+		}
+		&__numbersBoxItem {
+			text-align: left;
+			&:nth-child(2) {
+				margin-left: 64px;
+				margin-right: 61px;
+			}
+		}
+	}
+}
